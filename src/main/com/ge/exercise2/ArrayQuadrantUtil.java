@@ -1,6 +1,11 @@
 package com.ge.exercise2;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class ArrayQuadrantUtil {
+    private static final Logger logger = LogManager.getLogger(ArrayQuadrantUtil.class);
+
     char[][] data;
 
     public ArrayQuadrantUtil(char[][] data) {

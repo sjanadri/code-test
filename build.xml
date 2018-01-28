@@ -9,7 +9,7 @@
     <property name="test.build.dir" value="${build.dir}/test"/>
     <property name="test.src.dir" value="${src.dir}/test"/>
 
-    <property name="lib.dir"     value="lib"/>
+    <property name="lib.dir" value="lib"/>
 
     <path id="classpath.test">
         <fileset dir="${lib.dir}" includes="**/*.jar"/>
@@ -45,9 +45,9 @@
                 <path refid="classpath.test"/>
                 <pathelement location="${test.build.dir}"/>
             </classpath>
-            <formatter type="brief" usefile="false" />
+            <formatter type="brief" usefile="false"/>
             <batchtest>
-                <fileset dir="${test.src.dir}" includes="**/*Test.java" />
+                <fileset dir="${test.src.dir}" includes="**/*Test.java"/>
             </batchtest>
         </junit>
         <fail message="Some tests did not pass" if="test.failed"/>
