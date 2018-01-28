@@ -19,8 +19,8 @@ The users and groups are unique based on their ID and may appear multiple times 
 The format of the text follows the convention  
 ```
 Application(
-    id: 0
-    name: MyApp
+    id: 0,
+    name: MyApp,
     users: [
         User(
             id: 2,

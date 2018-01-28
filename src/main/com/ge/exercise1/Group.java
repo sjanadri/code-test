@@ -1,28 +1,28 @@
 package com.ge.exercise1;
 
 public abstract class Group {
-    private String groupId;
-    private String groupName;
+    private String id;
+    private String name;
 
-    public Group(String groupId, String groupName) {
-        this.groupId = groupId;
-        this.groupName = groupName;
+    public Group(String id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
-    public String getGroupId() {
-        return groupId;
+    public String getId() {
+        return id;
     }
 
-    public void setGroupId(String groupId) {
-        this.groupId = groupId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getGroupName() {
-        return groupName;
+    public String getName() {
+        return name;
     }
 
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int size;

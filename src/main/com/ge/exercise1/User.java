@@ -1,37 +1,28 @@
 package com.ge.exercise1;
 
 public abstract class User {
-    private String userId;
-    private String firstName;
-    private String lastName;
+    private String id;
+    private String name;
 
-    public User(String userId, String firstName, String lastName) {
-        this.userId = userId;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public User(String id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getId() {
+        return id;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }
