@@ -9,8 +9,7 @@
 6. Each exercise has some amount of JUnit tests already. More details on tests are provided in the exercise description.
 7. There is an ant script that can be used to build and test the project.
 
-
-
+#
 ## Exercise 1 - User and Group Parsing
 #### Package: com.ge.exercise1
 For this exercise you will need to retrieve application, user, and group data from structured text. 
@@ -60,8 +59,7 @@ Application(
 1. Do not modify the Parser interface of any of the abstract classes. 
 Build your own classes that extend and impmenent these interfaces/abstract classes.
 
-
- 
+# 
 ## Exercise 2 - Array Quartering Utility
 ### Package com.ge.exercise2
 For this exercise you will need to build a utility that can perform various operations on a given two dimensional array.
@@ -98,8 +96,7 @@ Operation #3 for quadrant 0,0 should return ```a b e f```
 ### Other considerations
 1. Feel free to make any changes you want as long as the existing tests are unaltered and continue to pass.
 
-
-
+#
 ## Exercise 3 - Bug Ridden Bank
 ### Package com.ge.exercise3
 
@@ -125,8 +122,7 @@ you will have to add several new features that are desperately needed.
 ### Other considerations
 1. Feel free to make any changes you want as long as the existing tests are unaltered and continue to pass.
 
-
-
+#
 ## Exercise 4 - Jet Engines
 ### Package com.ge.exercise4
 Description
@@ -155,8 +151,7 @@ Description
 ### Other considerations
 1. Feel free to make any changes you want as long as the existing tests are maintained and/or expanded
 
-
-
+#
 ## Exercise 5 - Bad Warehouse
 ### Package com.ge.exercise5
 For this exercise you will need to update our warehouse inventory software to accommodate a new type of item.
