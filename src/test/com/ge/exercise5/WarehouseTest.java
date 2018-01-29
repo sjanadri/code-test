@@ -163,11 +163,11 @@ public class WarehouseTest {
     }
 
     /**
-     * cliff item
+     * rare item
      */
 
     @Test
-    public void cliffItemWellBeforeSellDateTest() {
+    public void rareItemWellBeforeSellDateTest() {
         Item item = new Item(RARE, 10, 20);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -176,7 +176,7 @@ public class WarehouseTest {
     }
 
     @Test
-    public void cliffItemWellBeforeSellDateAtMaxValueTest() {
+    public void rareItemWellBeforeSellDateAtMaxValueTest() {
         Item item = new Item(RARE, 50, 20);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -185,7 +185,7 @@ public class WarehouseTest {
     }
 
     @Test
-    public void cliffItemWithin2weeksUpperBoundTest() {
+    public void rareItemWithin2weeksUpperBoundTest() {
         Item item = new Item(RARE, 10, 14);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -194,7 +194,7 @@ public class WarehouseTest {
     }
 
     @Test
-    public void cliffItemWithin2weeksUpperBoundAtMaxValueTest() {
+    public void rareItemWithin2weeksUpperBoundAtMaxValueTest() {
         Item item = new Item(RARE, 49, 14);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -203,7 +203,7 @@ public class WarehouseTest {
     }
 
     @Test
-    public void cliffItemWithin2weeksLowerBoundTest() {
+    public void rareItemWithin2weeksLowerBoundTest() {
         Item item = new Item(RARE, 10, 8);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -212,7 +212,7 @@ public class WarehouseTest {
     }
 
     @Test
-    public void cliffItemWithin2weeksLowerBoundAtMaxValueTest() {
+    public void rareItemWithin2weeksLowerBoundAtMaxValueTest() {
         Item item = new Item(RARE, 49, 8);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -221,7 +221,7 @@ public class WarehouseTest {
     }
 
     @Test
-    public void cliffItemWithin1weeksUpperBoundTest() {
+    public void rareItemWithin1weeksUpperBoundTest() {
         Item item = new Item(RARE, 10, 7);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -230,7 +230,7 @@ public class WarehouseTest {
     }
 
     @Test
-    public void cliffItemWithin1weeksUpperAtMaxValueBoundTest() {
+    public void rareItemWithin1weeksUpperAtMaxValueBoundTest() {
         Item item = new Item(RARE, 49, 7);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -239,7 +239,7 @@ public class WarehouseTest {
     }
 
     @Test
-    public void cliffItemWithin1weeksLowerBoundTest() {
+    public void rareItemWithin1weeksLowerBoundTest() {
         Item item = new Item(RARE, 10, 1);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -248,7 +248,7 @@ public class WarehouseTest {
     }
 
     @Test
-    public void cliffItemWithin1weeksLowerBoundAtMaxValueTest() {
+    public void rareItemWithin1weeksLowerBoundAtMaxValueTest() {
         Item item = new Item(RARE, 49, 1);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -258,7 +258,7 @@ public class WarehouseTest {
 
 
     @Test
-    public void cliffItemOnSellDate() {
+    public void rareItemOnSellDate() {
         Item item = new Item(RARE, 10, 0);
         warehouse.addItem(item);
         warehouse.updateItems();
@@ -267,7 +267,7 @@ public class WarehouseTest {
     }
 
     @Test
-    public void cliffItemOnAfterSellDate() {
+    public void rareItemOnAfterSellDate() {
         Item item = new Item(RARE, 10, -1);
         warehouse.addItem(item);
         warehouse.updateItems();
