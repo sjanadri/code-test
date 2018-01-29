@@ -68,7 +68,7 @@ public class Account {
         balance -= amount;
     }
 
-    public Number getMonthlyInterestRate() {
+    public float getMonthlyInterestRate() {
         return monthlyInterestRate;
     }
 
@@ -76,7 +76,7 @@ public class Account {
         this.monthlyInterestRate = monthlyInterestRate;
     }
 
-    public Number getMonthlyFee() {
+    public float getMonthlyFee() {
         return monthlyFee;
     }
 
@@ -100,11 +100,11 @@ public class Account {
         this.accountType = accountType;
     }
 
-    public Number getBalance() {
+    public float getBalance() {
         return balance;
     }
 
-    public void setBalance(float balance) {
+    void setBalance(float balance) {
         this.balance = balance;
     }
 }

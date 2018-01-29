@@ -3,7 +3,7 @@ package com.ge.exercise5;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.ge.exercise5.Item.ItemType.*;
+import static com.ge.exercise5.ItemType.*;
 import static org.junit.Assert.assertEquals;
 
 public class WarehouseTest {
@@ -168,7 +168,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemWellBeforeSellDateTest() {
-        Item item = new Item(CLIFF, 10, 20);
+        Item item = new Item(RARE, 10, 20);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(11, item.getValue());
@@ -177,7 +177,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemWellBeforeSellDateAtMaxValueTest() {
-        Item item = new Item(CLIFF, 50, 20);
+        Item item = new Item(RARE, 50, 20);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(50, item.getValue());
@@ -186,7 +186,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemWithin2weeksUpperBoundTest() {
-        Item item = new Item(CLIFF, 10, 14);
+        Item item = new Item(RARE, 10, 14);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(12, item.getValue());
@@ -195,7 +195,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemWithin2weeksUpperBoundAtMaxValueTest() {
-        Item item = new Item(CLIFF, 49, 14);
+        Item item = new Item(RARE, 49, 14);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(50, item.getValue());
@@ -204,7 +204,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemWithin2weeksLowerBoundTest() {
-        Item item = new Item(CLIFF, 10, 8);
+        Item item = new Item(RARE, 10, 8);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(12, item.getValue());
@@ -213,7 +213,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemWithin2weeksLowerBoundAtMaxValueTest() {
-        Item item = new Item(CLIFF, 49, 8);
+        Item item = new Item(RARE, 49, 8);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(50, item.getValue());
@@ -222,7 +222,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemWithin1weeksUpperBoundTest() {
-        Item item = new Item(CLIFF, 10, 7);
+        Item item = new Item(RARE, 10, 7);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(13, item.getValue());
@@ -231,7 +231,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemWithin1weeksUpperAtMaxValueBoundTest() {
-        Item item = new Item(CLIFF, 49, 7);
+        Item item = new Item(RARE, 49, 7);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(50, item.getValue());
@@ -240,7 +240,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemWithin1weeksLowerBoundTest() {
-        Item item = new Item(CLIFF, 10, 1);
+        Item item = new Item(RARE, 10, 1);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(13, item.getValue());
@@ -249,7 +249,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemWithin1weeksLowerBoundAtMaxValueTest() {
-        Item item = new Item(CLIFF, 49, 1);
+        Item item = new Item(RARE, 49, 1);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(50, item.getValue());
@@ -259,7 +259,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemOnSellDate() {
-        Item item = new Item(CLIFF, 10, 0);
+        Item item = new Item(RARE, 10, 0);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(0, item.getValue());
@@ -268,7 +268,7 @@ public class WarehouseTest {
 
     @Test
     public void cliffItemOnAfterSellDate() {
-        Item item = new Item(CLIFF, 10, -1);
+        Item item = new Item(RARE, 10, -1);
         warehouse.addItem(item);
         warehouse.updateItems();
         assertEquals(0, item.getValue());

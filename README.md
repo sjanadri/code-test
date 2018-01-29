@@ -93,7 +93,7 @@ Operation #3 for quadrant 0,0 should return ```a b e f```
 4. Write tests that confirm all functionality
 
 ### Other considerations
-1. Feel free to make any changes you want as long as the existing tests continue to pass.
+1. Feel free to make any necessary changes
 
 #
 ## Exercise 3 - Bug Ridden Bank
@@ -106,6 +106,8 @@ you will have to add several new features that are desperately needed.
 1. The Bank and Account classes in src/main/com/ge/exercise3
     - The Bank has many Accounts
     - The Account has a balance, a monthly interest rate, a monthly fee, and several other fields and methods
+        - Checking accounts default to no interest and no fees
+        - Savings accounts default to 1% interest and no fees
 2. JUnit tests in src/test/com/ge/exercise3
 
 ### What to do
@@ -119,7 +121,8 @@ you will have to add several new features that are desperately needed.
     - Prevent savings accounts from ever having a negative balance
 
 ### Other considerations
-1. Feel free to make any changes you want as long as the existing tests are unaltered and continue to pass.
+1. Feel free to make any necessary changes.
+2. Retain the existing tests as much as possible.
 
 #
 ## Exercise 4 - Jet Engines
@@ -156,7 +159,7 @@ for an upcoming engine.
     
 
 ### Other considerations
-1. Feel free to make any changes you want as long as the existing tests are maintained and/or expanded
+1. Feel free to make any necessary changes
 
 #
 ## Exercise 5 - Bad Warehouse
@@ -194,4 +197,5 @@ and within 7 days the value improves by 3x the normal rate. After the sellBy the
     - Perishable items are to degrade in value twice as fast as normal items
     
 ### Other considerations
-1. Make any updates you want as long as the existing test suite continues to pass
+1. Feel free to make any necessary changes.
+2. Retain the existing tests as much as possible.
