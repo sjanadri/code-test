@@ -33,7 +33,7 @@ public class BankTest {
         Account account = new Account("003", "Checking", 100.0f);
         bank.addAccount(account);
         bank.depositToAccount("003", 100.0f);
-        assertEquals(200.0f, account.getBalance());
+        assertEquals(200.0f, account.getBalance(), 0.01);
     }
 
     @Test
@@ -41,6 +41,6 @@ public class BankTest {
         Account account = new Account("004", "Checking", 100.0f);
         bank.addAccount(account);
         bank.withdrawFromAccount("004", 100.0f);
-        assertEquals(0.0f, account.getBalance());
+        assertEquals(0.0f, account.getBalance(), 0.01);
     }
 }
