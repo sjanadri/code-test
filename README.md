@@ -8,6 +8,12 @@
 6. Each exercise has some amount of JUnit tests already. More details on tests are provided in the exercise description.
 7. There is an ant script that can be used to build and test the project.
 
+## How to submit work
+1. Clone this repo from GitHub
+2. Create a branch
+3. Commit your solution to your chosen exercises
+4. Open a pull request on GitHub
+
 #
 ## Exercise 1 - User and Group Parsing
 #### Package: com.ge.exercise1
@@ -55,7 +61,7 @@ Application(
 3. Your parser should output an Application object that contains all the appropriate users and groups
 
 ### Other considerations
-1. Do not modify the Parser interface of any of the abstract classes. 
+1. Do not modify the Parser interface or any of the abstract classes. 
 Build your own classes that extend and implement these interfaces/abstract classes.
 
 # 
@@ -90,7 +96,9 @@ Operation #3 for quadrant 0,0 should return ```a b e f```
 1. Implement the 3 operations in ArrayQuadrantUtil
 2. Update the ArrayQuadrantUtil to work on any data type rather than just char
 3. Update the ArrayQuadrantUtil to work for any array of valid size
-4. Write tests that confirm all functionality
+4. Update the ArrayQuadrantUtil to work for an arbitrary partition size. For example, a 12x12 array could be
+partitioned into 3x3 or 4x4 partitions. 
+5. Write tests that confirm all functionality
 
 ### Other considerations
 1. Feel free to make any necessary changes
@@ -159,7 +167,7 @@ for an upcoming engine.
     
 
 ### Other considerations
-1. Feel free to make any necessary changes
+1. Feel free to make any necessary changes.
 
 #
 ## Exercise 5 - Bad Warehouse
