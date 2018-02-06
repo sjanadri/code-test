@@ -2,6 +2,7 @@
 <project name="code-exercise">
     <property name="build.dir" value="build"/>
     <property name="src.dir" value="src"/>
+    <property name="log.dir" value="logs"/>
 
     <property name="main.build.dir" value="${build.dir}/main"/>
     <property name="main.src.dir" value="${src.dir}/main"/>
@@ -18,6 +19,7 @@
 
     <target name="clean">
         <delete dir="${build.dir}" failonerror="false"/>
+        <delete dir="${log.dir}" failonerror="false"/>
     </target>
 
     <target name="compile" depends="clean">
