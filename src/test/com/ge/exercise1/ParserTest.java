@@ -28,6 +28,6 @@ public class ParserTest {
         assertEquals("SimpleGroup", app.getGroup("1").getName());
         assertEquals(1, app.getGroup("1").size);
 
-        assertEquals("Beth Jones", app.getUser("1").getName());
+        assertEquals("Beth Jones", app.getUser("2").getName());
     }
 }

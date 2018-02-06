@@ -3,7 +3,7 @@
 ## General Instructions
 1. Fully review the instructions for all exercises before beginning.
 2. Select 2 of the 5 exercises to complete.
-4. Please commit your solution no more than 24 hours after receiving the exercises.
+4. Please commit your solution no more than 48 hours after receiving the exercises.
 5. Be sure that you have JDK 1.7+ installed and Apache Ant 1.9+ installed on your system
 6. Each exercise has some amount of JUnit tests already. More details on tests are provided in the exercise description.
 7. There is an ant script that can be used to build and test the project.
