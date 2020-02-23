@@ -11,7 +11,7 @@ public class Account {
     private static float monthlyFee = 0.0f;
 
     private String accountNumber;
-    private String accountType;
+    private String accountType; 
     private float balance;
 
     public Account(String accountNumber, String accountType, float balance) {

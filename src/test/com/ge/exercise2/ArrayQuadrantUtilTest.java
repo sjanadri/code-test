@@ -9,17 +9,17 @@ public class ArrayQuadrantUtilTest {
 
     @Test
     public void getQuadrantValuesTest() {
-        char[][] data = {
-                {'a', 'b', 'c', 'd'},
-                {'e', 'f', 'g', 'h'},
-                {'i', 'j', 'k', 'l'},
-                {'m', 'n', 'o', 'p'}
+        String[][] data = {
+                {"a", "b", "c", "d"},
+                {"e", "f", "g", "h"},
+                {"i", "j", "k", "l"},
+                {"m", "n", "o", "p"}
         };
 
         ArrayQuadrantUtil util = new ArrayQuadrantUtil(data);
-        Assume.assumeNotNull(util.getQuadrantValues(0, 0));
+        Assume.assumeNotNull(util.getQuadrantValues(0, 0, 2));
 
-        char[] expectedResult = {'a', 'b', 'e', 'f'};
-        assertArrayEquals(expectedResult, util.getQuadrantValues(0, 0));
+        String[] expectedResult = {"a", "b", "e", "f"};
+        assertArrayEquals(expectedResult, util.getQuadrantValues(0, 0 , 2));
     }
 }
