@@ -3,13 +3,18 @@ package com.ge.exercise2;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class ArrayUtil {
+/**
+ * Class main thread to Array util.
+ *
+ */
+public class ArrayUtilApp {
 	
 	static Scanner sc = new Scanner(System.in);
 	static String[][] array; 
 
 	public static void main(String[] args) {
-		
+	
+  //Read input from Console.
 	array = readInput(); 
 	
 	int selectView;
