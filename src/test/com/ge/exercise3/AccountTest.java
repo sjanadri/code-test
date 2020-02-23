@@ -17,7 +17,7 @@ public class AccountTest {
     }
 
     @Test
-    public void depositAndWithdrawTest() {
+    public void depositAndWithdrawTest() { 
         checkingAccount.setBalance(0.0f);
         checkingAccount.deposit(100.0f);
         assertEquals(100.0f, checkingAccount.getBalance(), 0.01);
