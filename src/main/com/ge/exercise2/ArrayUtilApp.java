@@ -75,10 +75,9 @@ public class ArrayUtilApp {
 				System.out.println("Select the valid Quadrant to view:");
 				choice = sc.nextInt();
 			}while(!(quadrants.containsKey(choice)));
-			arrayQuadrantUtil.getQuadrantValues(quadrants.get(choice).row, quadrants.get(choice).column , quadSize);
-			
-		}
-		
+			String[] quadValues = arrayQuadrantUtil.getQuadrantValues(quadrants.get(choice).row, quadrants.get(choice).column , quadSize);
+			display(quadValues);
+		}	
 	}
 	
 
@@ -109,6 +108,7 @@ public class ArrayUtilApp {
 		display(rowValues);
 	}
 
+	
 	private static void display(String[] values) {
 		
 		for(int i = 0; i< values.length ; i ++) {
@@ -117,6 +117,11 @@ public class ArrayUtilApp {
 		
 	}
 
+	/**
+	 * Reads input from users and Stores into 2-D array.
+	 * 
+	 * @Returns {@link Array} of {@link String}.
+	 */
 	private static String[][] readInput() {
 
 		System.out.println("Enter Num of Rows :");

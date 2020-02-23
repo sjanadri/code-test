@@ -8,6 +8,5 @@ class  Quadrant{
 	  public Quadrant(int row , int column) {
 		  this.row = row;
 		  this.column = column;
-	  }
-	  
+	  }	  
 }

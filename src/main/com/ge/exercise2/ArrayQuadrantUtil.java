@@ -28,7 +28,7 @@ public class ArrayQuadrantUtil {
     	for (int i = row_start ; i < row_end ; i++ ) {
     		for(int j = col_start ; j< col_end ; j++){
     			quadValues[k++] = data[i][j];
-    			System.out.println(data[i][j]);
+    			
     		}
     	}  	
     	return quadValues;

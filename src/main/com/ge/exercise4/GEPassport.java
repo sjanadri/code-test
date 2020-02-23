@@ -43,7 +43,7 @@ public class GEPassport {
     public double thrustToWeightRatio() {
         return takeoffThrust / wetWeight;
     }
-
+    
     public String toString() {
         return ENGINE_MODEL + " SN: " + serialNumber;
     }
