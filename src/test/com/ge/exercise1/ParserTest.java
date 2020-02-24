@@ -4,8 +4,8 @@ import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.ge.exercise1.model.Application;
-import com.ge.exercise1.model.Parser;
+import com.ge.exercise1.Application;
+import com.ge.exercise1.Parser;
 
 import static org.junit.Assert.assertEquals;
 

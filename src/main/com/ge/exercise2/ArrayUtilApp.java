@@ -3,13 +3,18 @@ package com.ge.exercise2;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class ArrayUtil {
+/**
+ * Class main thread to Array util.
+ *
+ */
+public class ArrayUtilApp {
 	
 	static Scanner sc = new Scanner(System.in);
 	static String[][] array; 
 
 	public static void main(String[] args) {
-		
+	
+  //Read input from Console.
 	array = readInput(); 
 	
 	int selectView;
@@ -70,10 +75,9 @@ public class ArrayUtil {
 				System.out.println("Select the valid Quadrant to view:");
 				choice = sc.nextInt();
 			}while(!(quadrants.containsKey(choice)));
-			arrayQuadrantUtil.getQuadrantValues(quadrants.get(choice).row, quadrants.get(choice).column , quadSize);
-			
-		}
-		
+			String[] quadValues = arrayQuadrantUtil.getQuadrantValues(quadrants.get(choice).row, quadrants.get(choice).column , quadSize);
+			display(quadValues);
+		}	
 	}
 	
 
@@ -104,6 +108,7 @@ public class ArrayUtil {
 		display(rowValues);
 	}
 
+	
 	private static void display(String[] values) {
 		
 		for(int i = 0; i< values.length ; i ++) {
@@ -112,6 +117,11 @@ public class ArrayUtil {
 		
 	}
 
+	/**
+	 * Reads input from users and Stores into 2-D array.
+	 * 
+	 * @Returns {@link Array} of {@link String}.
+	 */
 	private static String[][] readInput() {
 
 		System.out.println("Enter Num of Rows :");

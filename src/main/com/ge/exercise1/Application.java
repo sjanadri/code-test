@@ -1,4 +1,4 @@
-package com.ge.exercise1.model;
+package com.ge.exercise1;
 
 import java.util.Collection;
 
