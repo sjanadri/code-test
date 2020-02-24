@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class ArrayUtilApp {
 	
 	static Scanner sc = new Scanner(System.in);
-	static String[][] array; 
+	static Object[][] array; 
 
 	public static void main(String[] args) {
 	
@@ -75,7 +75,7 @@ public class ArrayUtilApp {
 				System.out.println("Select the valid Quadrant to view:");
 				choice = sc.nextInt();
 			}while(!(quadrants.containsKey(choice)));
-			String[] quadValues = arrayQuadrantUtil.getQuadrantValues(quadrants.get(choice).row, quadrants.get(choice).column , quadSize);
+			String[] quadValues = (String[])arrayQuadrantUtil.getQuadrantValues(quadrants.get(choice).row, quadrants.get(choice).column , quadSize);
 			display(quadValues);
 		}	
 	}
@@ -120,9 +120,9 @@ public class ArrayUtilApp {
 	/**
 	 * Reads input from users and Stores into 2-D array.
 	 * 
-	 * @Returns {@link Array} of {@link String}.
+	 * @Returns {@link Array} of {@link Object Objects}.
 	 */
-	private static String[][] readInput() {
+	private static Object[][] readInput() {
 
 		System.out.println("Enter Num of Rows :");
 		int rows = sc.nextInt();
@@ -130,12 +130,12 @@ public class ArrayUtilApp {
 		System.out.println("Enter Num of Columns :");
 		int columns = sc.nextInt();
 		
-		String[][] data = new String[rows][columns];
+		Object[][] data = new String[rows][columns];
 		System.out.println("Enter the inputs to array :");
 		
 		for (int i = 0; i < rows; i++) {
 		      for (int j = 0; j < columns; j++) {
-		        String value = sc.next();
+		        Object value =sc.next();
 		        data[i][j] = value;
 		      }
 		    }

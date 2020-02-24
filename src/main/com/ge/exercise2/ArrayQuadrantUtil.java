@@ -8,13 +8,15 @@ import org.apache.logging.log4j.Logger;
 public class ArrayQuadrantUtil {
     private static final Logger logger = LogManager.getLogger(ArrayQuadrantUtil.class);
     
-    String[][] data;
+    Object[][] data;
 
-    public ArrayQuadrantUtil(String[][] data) { 
-        this.data = data;
+    public ArrayQuadrantUtil(Object[][] array) { 
+    	
+    	this.data =  array;
+    	
     }
     
-    public String[] getQuadrantValues(int row, int column, int quadSize) {
+    public Object[] getQuadrantValues(int row, int column, int quadSize) {
     	
     	int row_start = row* quadSize  ;
     	int row_end = row_start + quadSize ;
@@ -22,7 +24,7 @@ public class ArrayQuadrantUtil {
     	int col_start = column* quadSize  ;
     	int col_end = col_start + quadSize ;
     	
-    	String[] quadValues = new String[quadSize*quadSize];
+    	Object[] quadValues = new Object[quadSize*quadSize];
     	 
     	int k=0;
     	
@@ -42,13 +44,13 @@ public class ArrayQuadrantUtil {
 		String[] columnData = new String[data[0].length];
 		
 		for(int row = 0; row < data.length; row++) {
-			columnData[row] = data[row][colSelected];
+			columnData[row] = (String) data[row][colSelected];
 		}
 		return columnData;
 	}
 
 	public String[] getRowValues(int rowSelected) {
-		return data[rowSelected];
+		return (String[]) data[rowSelected];
 	}
 
 	  public HashMap<Integer, Quadrant> getQuadrants(int quadSize) {
