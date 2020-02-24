@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 public class ArrayQuadrantUtil {
     private static final Logger logger = LogManager.getLogger(ArrayQuadrantUtil.class);
+    
     String[][] data;
 
     public ArrayQuadrantUtil(String[][] data) { 
@@ -37,7 +38,7 @@ public class ArrayQuadrantUtil {
 
 
 	public String[] getColumnValues(int colSelected) {
-		
+		logger.info("Retriving Column Values for Column numbered {0}", colSelected );
 		String[] columnData = new String[data[0].length];
 		
 		for(int row = 0; row < data.length; row++) {
