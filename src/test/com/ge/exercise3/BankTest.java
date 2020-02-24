@@ -9,7 +9,7 @@ public class BankTest {
 
     Bank bank;
 
-    @Before
+    @Before 
     public void setUp() {
         bank = new Bank();
     }

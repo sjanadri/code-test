@@ -12,7 +12,7 @@ public class AccountTest {
 
     @Before
     public void setUp() {
-        checkingAccount = new Account("001", "Checking");
+        checkingAccount = new Account("001", "Checking"); 
         savingsAccount = new Account("002", "Savings");
     }
 
