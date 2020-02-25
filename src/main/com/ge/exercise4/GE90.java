@@ -40,7 +40,6 @@ public class GE90 implements GEEngines{
         this.flightHours = flightHours;
     }
     
-
     public int getNumRebuilds() {
 		return numRebuilds;
 	}
@@ -56,8 +55,6 @@ public class GE90 implements GEEngines{
     public String toString() {
         return ENGINE_MODEL + " SN: " + serialNumber;
     }
-   
-    
     
     /**
      * Method for the engines that calculates how many hours are left before a rebuild is needed

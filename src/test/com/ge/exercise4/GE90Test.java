@@ -24,7 +24,6 @@ public class GE90Test {
         assertEquals(testEngine.takeoffThrust / testEngine.dryWeight, testEngine.thrustToWeightRatio(), 0.01);
     }
     
-
     @Test
     public void hoursToRebuildTest() {
         assertEquals( 5000.0,testEngine.hoursToRebuild(testEngine.getFlightHours(), testEngine.getNumRebuilds()), 0);

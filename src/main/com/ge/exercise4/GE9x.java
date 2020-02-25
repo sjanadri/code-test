@@ -7,7 +7,7 @@ public class GE9x implements GEEngines{
 	
 	 private static final Logger logger = LogManager.getLogger(GE90.class);
 
-	    private static final String ENGINE_MODEL = GE90.class.getSimpleName();
+	    private static final String ENGINE_MODEL = GE9x.class.getSimpleName();
 	    private final String serialNumber;
 
 	    public final int maxNumRebuilds = 5;
@@ -40,6 +40,14 @@ public class GE9x implements GEEngines{
 	    public void setFlightHours(double flightHours) {
 	        this.flightHours = flightHours;
 	    }
+	    
+	    public int getNumRebuilds() {
+			return numRebuilds;
+		}
+
+		public void setNumRebuilds(int numRebuilds) {
+			this.numRebuilds = numRebuilds;
+		}
 
 	    public double thrustToWeightRatio() {
 	        return takeoffThrust / dryWeight;
@@ -49,16 +57,26 @@ public class GE9x implements GEEngines{
 	        return ENGINE_MODEL + " SN: " + serialNumber;
 	    }
 	    
+	    /**
+	     * Method for the engines that calculates how many hours are left before a rebuild is needed
+	     * 
+	     * @return Number of hours after which the Rebuild is needed.
+	     */
 	    @Override
 	    public double hoursToRebuild(double flightHours, int numRebuilds) {
 
 			if (numRebuilds >= maxNumRebuilds)
 				return 0;
 			else
-				return flightHours - (numRebuilds * flightHoursBeforeRebuild);
+				return (flightHours - (numRebuilds * flightHoursBeforeRebuild));
 
 		}
 
+	    /**
+	     * Method for the engines that calculates how many hours of flight service is left.
+	     * 
+	     * @return Number of hours Flight Service is available.
+	     */
 		@Override
 		public double hoursToService(double flightHours) {	
 
@@ -66,5 +84,6 @@ public class GE9x implements GEEngines{
 	    	
 	    	return totalServiceHours - flightHours;
 		}
+
 
 }
