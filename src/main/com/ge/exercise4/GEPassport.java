@@ -3,7 +3,7 @@ package com.ge.exercise4;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class GEPassport {
+public class GEPassport implements GEEngines{
     private static final Logger logger = LogManager.getLogger(GEPassport.class);
 
     private static final String ENGINE_MODEL = GEPassport.class.getSimpleName();
@@ -41,11 +41,29 @@ public class GEPassport {
     }
 
     public double thrustToWeightRatio() {
-        return takeoffThrust / wetWeight;
+        return takeoffThrust / dryWeight;
     }
     
     public String toString() {
         return ENGINE_MODEL + " SN: " + serialNumber;
     }
+    
+    @Override
+    public double hoursToRebuild(double flightHours, int numRebuilds) {
+
+		if (numRebuilds >= maxNumRebuilds)
+			return 0;
+		else
+			return flightHours - (numRebuilds * flightHoursBeforeRebuild);
+
+	}
+
+	@Override
+	public double hoursToService(double flightHours) {	
+
+    	double totalServiceHours = (maxNumRebuilds+1)*flightHoursBeforeRebuild;
+    	
+    	return totalServiceHours - flightHours;
+	}
 
 }
