@@ -5,18 +5,18 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class GEPassportTest {
+public class GE9xTest {
 
-    GEPassport testEngine;
+	GE9x testEngine;
 
     @Before
     public void setUp() {
-    	testEngine = new GEPassport("0001" , 30_000, 1);
+    	testEngine = new GE9x("0001" , 30_000, 1);
     }
 
     @Test
     public void toStringTest() {
-        assertEquals("GEPassport SN: 0001", testEngine.toString());
+        assertEquals("GE9x SN: 0001", testEngine.toString());
     }
 
     @Test
@@ -31,6 +31,6 @@ public class GEPassportTest {
     
     @Test
     public void hoursToService() {
-    	assertEquals(20000.0 , testEngine.hoursToService(testEngine.getFlightHours()), 0.0);
+    	assertEquals(150000 , testEngine.hoursToService(testEngine.getFlightHours()), 0.0);
     }
 }
